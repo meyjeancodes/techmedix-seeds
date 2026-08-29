@@ -1,0 +1,45 @@
+{
+  "slug": "skydio_x10",
+  "failure_modes": [
+    {
+      "name": "vision_nav_low_light",
+      "component": "visual_inertial_odometry_cameras",
+      "severity": "high",
+      "mtbf_hours_est": 250,
+      "symptoms": "position drift at dusk/night; VIO lost; altitude error; hesitation in autonomous flight",
+      "mitigation": "ensure adequate ambient/IR illumination; limit unaided night ops; GPS/RTK fusion; pre-mapped routes"
+    },
+    {
+      "name": "battery_fade",
+      "component": "X10_intelligent_battery",
+      "severity": "high",
+      "mtbf_hours_est": 400,
+      "symptoms": "reduced endurance; cell imbalance; charge-time increase; early RTH",
+      "mitigation": "balance charge; cool storage; retire below 80% capacity; avoid deep discharge"
+    },
+    {
+      "name": "gimbal_jitter",
+      "component": "three_axis_gimbal",
+      "severity": "medium",
+      "mtbf_hours_est": 400,
+      "symptoms": "gimbal jitter; horizon tilt; motor overload; video shake",
+      "mitigation": "calibrate gimbal; avoid impact; firmware update; replace gimbal motor on overload"
+    },
+    {
+      "name": "thermal_sensor_calibration_drift",
+      "component": "FLIR_thermal_payload",
+      "severity": "medium",
+      "mtbf_hours_est": 500,
+      "symptoms": "temperature reading offset; hot/cold spot artifacts; NUC failure; radiometric drift",
+      "mitigation": "periodic non-uniformity correction; ambient calibration; shield from direct sun; recalibrate"
+    },
+    {
+      "name": "connector_wear",
+      "component": "payload_battery_connector",
+      "severity": "medium",
+      "mtbf_hours_est": 450,
+      "symptoms": "intermittent power; contact resistance rise; sparking; loose fit",
+      "mitigation": "inspect pins; clean contacts; replace worn connector; correct insertion force"
+    }
+  ]
+}

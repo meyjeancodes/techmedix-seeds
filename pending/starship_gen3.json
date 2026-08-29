@@ -1,0 +1,45 @@
+{
+  "slug": "starship_gen3",
+  "failure_modes": [
+    {
+      "name": "wheel_hub_bearing_water_ingress",
+      "component": "wheel_hub_bearing",
+      "severity": "high",
+      "mtbf_hours_est": 400,
+      "symptoms": "bearing noise; increased rolling resistance; wheel wobble; premature wear",
+      "mitigation": "seal upgrade; grease replenishment; bearing replacement; water-ingress test"
+    },
+    {
+      "name": "lidar_camera_contamination",
+      "component": "lidar_camera_perception_suite",
+      "severity": "high",
+      "mtbf_hours_est": 200,
+      "symptoms": "obstacle misdetection; blurred perception; false stops; navigation errors",
+      "mitigation": "clean sensors; wiper/cover; hydrophobic coating; scheduled inspection"
+    },
+    {
+      "name": "battery_12h_duty_cycle_fade",
+      "component": "li_ion_battery_pack",
+      "severity": "high",
+      "mtbf_hours_est": 500,
+      "symptoms": "endurance drop over shift; thermal throttling; incomplete charge; capacity fade",
+      "mitigation": "battery swap; thermal management; cycle limit; opportunity charging"
+    },
+    {
+      "name": "connectivity_dropout",
+      "component": "cellular_wifi_modem",
+      "severity": "medium",
+      "mtbf_hours_est": 400,
+      "symptoms": "telemetry loss; remote-stop failure; map desync; control latency",
+      "mitigation": "multi-carrier SIM; fallback mesh; local autonomy; reconnect logic"
+    },
+    {
+      "name": "vandalism",
+      "component": "exterior_shell_locks",
+      "severity": "medium",
+      "mtbf_hours_est": 300,
+      "symptoms": "shell damage; forced lid; sensor cover removed; theft attempt",
+      "mitigation": "camera deterrence; tamper alarm; reinforced shell; geofence alert"
+    }
+  ]
+}

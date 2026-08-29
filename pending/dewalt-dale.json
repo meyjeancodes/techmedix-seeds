@@ -1,0 +1,37 @@
+{
+  "slug": "dewalt-dale",
+  "failure_modes": [
+    {
+      "name": "Wheel encoder slip on dusty slab",
+      "component": "Wheel odometry encoder / traction wheel",
+      "severity": "medium",
+      "mtbf_hours_est": 600,
+      "symptoms": "Odometry drift on dusty/uneven concrete; slip during acceleration; inconsistent distance counts",
+      "mitigation": "Dust-resistant tread; periodic wheel cleaning; fusing odometry with GNSS/IMU; slip-detection filter"
+    },
+    {
+      "name": "Laser/optics dust",
+      "component": "Layout laser projector / optical targeting",
+      "severity": "high",
+      "mtbf_hours_est": 500,
+      "symptoms": "Faint or distorted line projection; misaligned layout marks; reduced beam intensity; scatter haze",
+      "mitigation": "Sealed optical housing; compressed-air lens purge; daily lens wipe; beam-intensity self-test"
+    },
+    {
+      "name": "Battery",
+      "component": "Removable tool-pack battery",
+      "severity": "medium",
+      "mtbf_hours_est": 1800,
+      "symptoms": "Reduced runtime; voltage sag under laser+motion load; charge-not-held; unexpected cutoff",
+      "mitigation": "Cell health monitoring; temperature-managed charging; spare-pack rotation; low-voltage early warning"
+    },
+    {
+      "name": "Positioning drift",
+      "component": "Localization stack (GNSS/IMU/wheel fusion)",
+      "severity": "high",
+      "mtbf_hours_est": 800,
+      "symptoms": "Layout marks offset from true coords; accumulated error over long runs; poor RTK fix indoors",
+      "mitigation": "RTK base-station tie-in; fiducial re-localization; IMU bias calibration; surveyed checkpoint verification"
+    }
+  ]
+}

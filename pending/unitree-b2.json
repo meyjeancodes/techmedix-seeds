@@ -1,0 +1,45 @@
+{
+  "slug": "unitree-b2",
+  "failure_modes": [
+    {
+      "name": "Seal degradation",
+      "component": "IP67 joint/actuator seals (elastomer O-rings)",
+      "severity": "high",
+      "mtbf_hours_est": 2500,
+      "symptoms": "Water/dust ingress into actuator; condensation on encoder; corrosion at terminals; loss of IP rating",
+      "mitigation": "Scheduled seal replacement; material upgrade to fluorocarbon; ingress inspection at service interval"
+    },
+    {
+      "name": "Knee overload",
+      "component": "Knee joint actuator (high-torque quadruped leg)",
+      "severity": "high",
+      "mtbf_hours_est": 1800,
+      "symptoms": "Excessive current draw on stairs/ascent; gear whine; position lag; thermal trip under sustained load",
+      "mitigation": "Load-aware gait planning; current limiting; reinforced reducer; dynamic payload capping"
+    },
+    {
+      "name": "Lidar contamination",
+      "component": "3D lidar (sensor window/optics)",
+      "severity": "medium",
+      "mtbf_hours_est": 900,
+      "symptoms": "Sparse point cloud; phantom returns from mud/water film; degraded SLAM localization; blind spots",
+      "mitigation": "Wiper/air-blast window cleaning; hydrophobic coating; periodic optical inspection; degraded-mode nav fallback"
+    },
+    {
+      "name": "Contactor failure",
+      "component": "Main battery contactor (high-current relay)",
+      "severity": "critical",
+      "mtbf_hours_est": 4000,
+      "symptoms": "Failure to energize drive bus; welded/stuck contact; no power-on; random bus dropouts",
+      "mitigation": "Redundant pre-charge circuit; contactor cycle-count monitoring; derating; predictive replacement"
+    },
+    {
+      "name": "Resonance",
+      "component": "Leg structural / actuator control loop",
+      "severity": "medium",
+      "mtbf_hours_est": 3500,
+      "symptoms": "Oscillation at gait cadence; amplified vibration at natural frequency; premature fastener loosening",
+      "mitigation": "Notch filtering; stiffness/tuning sweep at commissioning; damped mounts; gait frequency avoidance band"
+    }
+  ]
+}

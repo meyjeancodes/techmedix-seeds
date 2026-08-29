@@ -1,0 +1,37 @@
+{
+  "slug": "moon-surgical-maestro",
+  "failure_modes": [
+    {
+      "name": "arm_drift_during_retraction",
+      "component": "arm_actuator",
+      "severity": "critical",
+      "mtbf_hours_est": 180,
+      "symptoms": "unintended arm movement; tissue tension loss; drift from hold position; surgeon repositioning",
+      "mitigation": "brake-on-idle; encoder recalibration; force-limit clamp; scheduled joint service"
+    },
+    {
+      "name": "trocar_interface_wear",
+      "component": "trocar_mount",
+      "severity": "high",
+      "mtbf_hours_est": 250,
+      "symptoms": "play in instrument mount; wobble; misalignment; increased insertion force",
+      "mitigation": "trocar replacement schedule; mount inspection; insertion-force monitoring; sterile re-mount"
+    },
+    {
+      "name": "software_watchdog_timeout",
+      "component": "control_system",
+      "severity": "high",
+      "mtbf_hours_est": 350,
+      "symptoms": "arm freeze; system reboot; loss of control input; emergency stop activation",
+      "mitigation": "watchdog tuning; dual-controller redundancy; real-time kernel; fault-log analysis"
+    },
+    {
+      "name": "arm_cable_fatigue",
+      "component": "internal_cabling",
+      "severity": "medium",
+      "mtbf_hours_est": 400,
+      "symptoms": "intermittent signal loss; arm position error; cable harness wear; connector corrosion",
+      "mitigation": "flex-rated cable; strain relief; bend-radius limit; preventive replacement"
+    }
+  ]
+}

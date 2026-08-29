@@ -1,0 +1,37 @@
+{
+  "slug": "torin-surgical",
+  "failure_modes": [
+    {
+      "name": "targeted_recovery_tracking_loss",
+      "component": "recovery_tracking_system",
+      "severity": "high",
+      "mtbf_hours_est": 200,
+      "symptoms": "loss of recovery trajectory; tracking drift; fiducial occlusion; guidance error",
+      "mitigation": "multi-camera redundancy; predictive tracking; re-acquisition protocol; surgeon override"
+    },
+    {
+      "name": "prototype_actuator_failure",
+      "component": "precision_actuator",
+      "severity": "critical",
+      "mtbf_hours_est": 160,
+      "symptoms": "actuator stalling; position error; unexpected motion; emergency halt",
+      "mitigation": "actuator health monitoring; redundant actuation; graceful degradation; fail-safe braking"
+    },
+    {
+      "name": "haptic_feedback_dropout",
+      "component": "force_feedback",
+      "severity": "medium",
+      "mtbf_hours_est": 300,
+      "symptoms": "loss of tactile sensation; force display freeze; latency spike; feedback oscillation",
+      "mitigation": "haptic calibration; signal filtering; latency monitoring; redundant sensor"
+    },
+    {
+      "name": "navigation_system_drift",
+      "component": "optical_navigation",
+      "severity": "high",
+      "mtbf_hours_est": 250,
+      "symptoms": "spatial reference drift; instrument tip error; field-of-view loss; recalibration trigger",
+      "mitigation": "active LED tracking; drift correction; reference marker check; environmental lighting control"
+    }
+  ]
+}

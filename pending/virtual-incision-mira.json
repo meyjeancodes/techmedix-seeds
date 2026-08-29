@@ -1,0 +1,37 @@
+{
+  "slug": "virtual-incision-mira",
+  "failure_modes": [
+    {
+      "name": "miniaturized_instrument_slip",
+      "component": "surgical_instrument_tip",
+      "severity": "critical",
+      "mtbf_hours_est": 120,
+      "symptoms": "instrument slip during tissue manipulation; loss of grip precision; unexpected tissue movement",
+      "mitigation": "tip surface coating; grip-force feedback; instrument replacement schedule; surgeon override"
+    },
+    {
+      "name": "battery_depletion_mid_procedure",
+      "component": "power_system",
+      "severity": "high",
+      "mtbf_hours_est": 200,
+      "symptoms": "sudden power loss; low-battery warning; reduced actuator torque; emergency shutdown",
+      "mitigation": "pre-op battery check; redundant power cell; hot-swap battery bay; procedure-time limit"
+    },
+    {
+      "name": "imaging_fiber_breakage",
+      "component": "endoscopic_imaging",
+      "severity": "high",
+      "mtbf_hours_est": 150,
+      "symptoms": "image degradation; fiberoptic break; dark spots in view; loss of depth perception",
+      "mitigation": "fiber strain relief; pre-op imaging check; redundant imaging; scope replacement"
+    },
+    {
+      "name": "sterilization_cycle_fatigue",
+      "component": "instrument_housing",
+      "severity": "medium",
+      "mtbf_hours_est": 300,
+      "symptoms": "housing micro-cracks; seal degradation; discoloration; joint stiffness after autoclave",
+      "mitigation": "cycle-count tracking; seal replacement schedule; single-use sheath option; material upgrade"
+    }
+  ]
+}

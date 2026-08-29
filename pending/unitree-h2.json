@@ -1,0 +1,37 @@
+{
+  "slug": "unitree-h2",
+  "failure_modes": [
+    {
+      "name": "hip_actuator_overload",
+      "component": "hip_joint_actuator",
+      "severity": "critical",
+      "mtbf_hours_est": 200,
+      "symptoms": "hip torque saturation; walking instability; fall risk; actuator thermal shutdown",
+      "mitigation": "torque-limit tuning; gait derating; hip cooling; payload verification"
+    },
+    {
+      "name": "arm_manipulation_payload_exceed",
+      "component": "arm_actuator",
+      "severity": "high",
+      "mtbf_hours_est": 300,
+      "symptoms": "arm oscillation; grasp failure; joint overload; reduced reach accuracy",
+      "mitigation": "payload monitoring; grasp-force limit; arm-stabilization control; task replanning"
+    },
+    {
+      "name": "balance_controller_instability",
+      "component": "balance_control",
+      "severity": "critical",
+      "mtbf_hours_est": 250,
+      "symptoms": "upper-body oscillation; foot-slip; IMU drift; corrective step failure",
+      "mitigation": "IMU recalibration; balance-gain tuning; foot-force feedback; emergency sit"
+    },
+    {
+      "name": "battery_thermal_runaway_risk",
+      "component": "battery_pack",
+      "severity": "critical",
+      "mtbf_hours_est": 500,
+      "symptoms": "cell temperature spike; BMS thermal alert; reduced power; emergency shutdown",
+      "mitigation": "thermal monitoring; cell balancing; BMS threshold; battery replacement protocol"
+    }
+  ]
+}

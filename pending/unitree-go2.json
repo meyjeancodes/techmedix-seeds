@@ -1,0 +1,37 @@
+{
+  "slug": "unitree-go2",
+  "failure_modes": [
+    {
+      "name": "leg_joint_actuator_overheat",
+      "component": "leg_joint_motor",
+      "severity": "high",
+      "mtbf_hours_est": 200,
+      "symptoms": "motor thermal warning; reduced torque; gait degradation; emergency stop",
+      "mitigation": "thermal monitoring; gait derating; cooling period; ambient temperature limit"
+    },
+    {
+      "name": "foot_contact_sensor_failure",
+      "component": "foot_force_sensor",
+      "severity": "medium",
+      "mtbf_hours_est": 300,
+      "symptoms": "lost ground-contact feedback; gait instability; stumble; fall risk",
+      "mitigation": "sensor redundancy; gait adaptation; sensor replacement; terrain assessment"
+    },
+    {
+      "name": "battery_cell_imbalance",
+      "component": "battery_pack",
+      "severity": "high",
+      "mtbf_hours_est": 400,
+      "symptoms": "reduced runtime; voltage sag; BMS warning; sudden shutdown",
+      "mitigation": "cell balancing; BMS calibration; battery replacement; charge-cycle tracking"
+    },
+    {
+      "name": "lidar_occlusion",
+      "component": "lidar_sensor",
+      "severity": "medium",
+      "mtbf_hours_est": 350,
+      "symptoms": "partial field-of-view loss; navigation drift; obstacle miss; localization error",
+      "mitigation": "lidar cleaning; occlusion detection; redundant camera; sensor fusion"
+    }
+  ]
+}

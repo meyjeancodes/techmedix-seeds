@@ -1,0 +1,45 @@
+{
+  "slug": "unitree_g1",
+  "failure_modes": [
+    {
+      "name": "Joint overheat",
+      "component": "Hip/knee actuator (rotary servo with integrated driver)",
+      "severity": "high",
+      "mtbf_hours_est": 1200,
+      "symptoms": "Joint temperature rising above 70C; torque output derating; thermal warning on control PC; reduced dynamic motion",
+      "mitigation": "Active cooling / duty-cycle limiting; temperature watchdog with graded torque throttling; periodic grease inspection"
+    },
+    {
+      "name": "Encoder drift",
+      "component": "Joint absolute encoder (magnetic/on-axis)",
+      "severity": "medium",
+      "mtbf_hours_est": 3000,
+      "symptoms": "Position estimate drift during sustained motion; small steady-state joint angle error; calibration needed after power cycle",
+      "mitigation": "Periodic zero-reference re-homing; redundant hall/IMU cross-check; firmware encoder auto-calibration routine"
+    },
+    {
+      "name": "Fall damage",
+      "component": "Chassis, limbs, onboard compute (whole-body impact)",
+      "severity": "critical",
+      "mtbf_hours_est": 800,
+      "symptoms": "Unexpected tip-over; cracked housing; IMU spike; loss of locomotion; joint actuator deformation",
+      "mitigation": "MPC fall-prevention controller; impact-absorbing covers; graceful fall reflex; pre-gait stability checks"
+    },
+    {
+      "name": "Battery connector",
+      "component": "Main pack-to-chassis power connector",
+      "severity": "high",
+      "mtbf_hours_est": 2000,
+      "symptoms": "Intermittent power loss under vibration; voltage sag; sparking at connector; shutdown mid-task",
+      "mitigation": "Locking latching connectors; torque-checked fasteners; vibration isolation; periodic contact resistance check"
+    },
+    {
+      "name": "Hand tendon",
+      "component": "Dexterous hand cable/tendon drive",
+      "severity": "medium",
+      "mtbf_hours_est": 1500,
+      "symptoms": "Reduced grip force; slack or frayed tendon; non-repeatable finger closure; clicking during actuation",
+      "mitigation": "Scheduled tendon tensioning; wear-limit inspection; lubricated guides; limit grip-force envelope"
+    }
+  ]
+}

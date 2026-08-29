@@ -1,0 +1,37 @@
+{
+  "slug": "lely-discovery-collector",
+  "failure_modes": [
+    {
+      "name": "Manure ingress",
+      "component": "Drive/actuator enclosure & chassis seams",
+      "severity": "high",
+      "mtbf_hours_est": 700,
+      "symptoms": "Corrosion at seams; clogged vents; sensor fouling; motor housing contamination; odor/shorting",
+      "mitigation": "Washdown-rated enclosures; scheduled high-pressure cleaning; drainage design; conformal-coated electronics"
+    },
+    {
+      "name": "Bumper sensor",
+      "component": "Perimeter bumper / proximity sensor",
+      "severity": "medium",
+      "mtbf_hours_est": 1200,
+      "symptoms": "False obstacle triggers; stuck bumper; missed collision detection; erratic stop behavior",
+      "mitigation": "Switch contact cleaning; bumper travel re-calibration; redundant proximity sensing; self-test on startup"
+    },
+    {
+      "name": "Charging contact corrosion",
+      "component": "Docking charging contacts (pogo/slide)",
+      "severity": "medium",
+      "mtbf_hours_est": 1600,
+      "symptoms": "Intermittent charge; high contact resistance; arcing; failure to reach full charge; docking retries",
+      "mitigation": "Gold-plated/contamination-resistant contacts; contact wipe on dock; corrosion inhibitor; contact resistance monitor"
+    },
+    {
+      "name": "Wheel slip",
+      "component": "Traction wheel / drivetrain on barn floor",
+      "severity": "medium",
+      "mtbf_hours_est": 900,
+      "symptoms": "Loss of traction on wet/slick floor; odometry error; missed waypoints; spinning wheels",
+      "mitigation": "Aggressive tread pattern; reduced speed on known-wet zones; IMU/encoder slip detection; floor-grip-aware planner"
+    }
+  ]
+}

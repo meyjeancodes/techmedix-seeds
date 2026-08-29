@@ -1,0 +1,53 @@
+{
+  "slug": "bird_three",
+  "failure_modes": [
+    {
+      "name": "BMS/cell fault",
+      "component": "Battery management system and lithium-ion cells",
+      "severity": "high",
+      "mtbf_hours_est": 2600,
+      "symptoms": "Vehicle reports low state-of-charge erratically, unexpected power cutoff under load, swollen pack, or permanent no-start with charger LED fault.",
+      "mitigation": "Periodic pack resistance/voltage balancing at depot, firmware BMS health polling, quarantine packs with cell delta-V over threshold, and scheduled cell-module replacement before end of rated cycle life."
+    },
+    {
+      "name": "Drum brake wear",
+      "component": "Sealed drum brake (rear hub)",
+      "severity": "medium",
+      "mtbf_hours_est": 1800,
+      "symptoms": "Increased stopping distance, audible scraping during deceleration, lever/paddle requires excess travel, or brake drag causing reduced range.",
+      "mitigation": "Scheduled shoe inspection at 1500h service interval, replace worn shoes, adjust actuating cable, and log braking-force telemetry to flag degradation early."
+    },
+    {
+      "name": "IoT/GPS module failure",
+      "component": "IoT telemetry and GPS module",
+      "severity": "medium",
+      "mtbf_hours_est": 3400,
+      "symptoms": "Vehicle goes dark in fleet map, rides cannot be unlocked via app, GPS position jumps or is unavailable, or heartbeat pings stop.",
+      "mitigation": "Redundant cellular+GNSS health check, remote reboot command, antenna and SIM-slot inspection at service, and swap module on repeated comms loss."
+    },
+    {
+      "name": "Connector corrosion at IP68 limits",
+      "component": "Waterproof (IP68) harness connectors",
+      "severity": "high",
+      "mtbf_hours_est": 2200,
+      "symptoms": "Intermittent power or sensor dropouts after rain exposure, visible green oxidation at connector faces, elevated resistance readings, or water ingress fault codes.",
+      "mitigation": "Re-seal connectors with dielectric grease, replace degraded grommets/O-rings, pressure-test IP68 seals at depot, and avoid deep-pressure wash that defeats seals."
+    },
+    {
+      "name": "Vandalism damage",
+      "component": "Chassis, deck, and exposed electronics",
+      "severity": "medium",
+      "mtbf_hours_est": 1500,
+      "symptoms": "Cut wiring, snapped handlebars, stripped QR labels, smashed display, or graffitied/disabled locking mechanism discovered at pickup.",
+      "mitigation": "Hardened locking, tamper-evident seals, geofenced idle alerts, rapid recovery of mis-parked units, and repair-or-retire triage on damage detection."
+    },
+    {
+      "name": "Solid tire wear",
+      "component": "Pneumatic-free solid tires",
+      "severity": "low",
+      "mtbf_hours_est": 4000,
+      "symptoms": "Reduced ride cushioning, visible flat spots or chunking, increased vibration transmitted to deck, or accelerated hub bearing wear from poor damping.",
+      "mitigation": "Rotate wheel positions, replace tires at tread/depth limit, monitor vibration signatures, and standardize on softer-compound tires for smoother fleet ride."
+    }
+  ]
+}

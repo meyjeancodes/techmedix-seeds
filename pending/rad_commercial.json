@@ -1,0 +1,53 @@
+{
+  "slug": "rad_commercial",
+  "failure_modes": [
+    {
+      "name": "750W hub motor bearing failure",
+      "component": "Rear hub motor (750W) bearings",
+      "severity": "high",
+      "mtbf_hours_est": 2800,
+      "symptoms": "Grinding or rumbling from the hub, increased rolling resistance, heat at the axle, or motor stalling under load.",
+      "mitigation": "Scheduled bearing inspection, regrease or replace sealed bearings at interval, avoid sustained overload, and monitor motor temperature telemetry."
+    },
+    {
+      "name": "672Wh pack BMS fault",
+      "component": "672Wh battery pack and BMS",
+      "severity": "high",
+      "mtbf_hours_est": 2500,
+      "symptoms": "Sudden cutoff under throttle, inaccurate range estimate, swollen cells, charger fault, or no power on key-on.",
+      "mitigation": "BMS health polling, cell delta-V screening, climate-controlled storage, and scheduled pack replacement before cycle-life end."
+    },
+    {
+      "name": "Mechanical disc brake pad wear",
+      "component": "Mechanical disc brake calipers and pads",
+      "severity": "medium",
+      "mtbf_hours_est": 1400,
+      "symptoms": "Increased lever pull, squealing or grinding at the rotor, reduced braking force, or rotor scoring from metal-on-metal contact.",
+      "mitigation": "Pad-thickness inspection at service, replace pads before limit, true/clean rotors, and adjust cable tension."
+    },
+    {
+      "name": "Chain/drivetrain wear",
+      "component": "Chain, sprockets, and derailleur",
+      "severity": "medium",
+      "mtbf_hours_est": 1700,
+      "symptoms": "Chain skipping under load, rust or stiff links, excessive drivetrain noise, or poor gear engagement.",
+      "mitigation": "Regular chain lubrication and tension check, replace stretched chain and worn sprockets, and keep drivetrain clean of grit."
+    },
+    {
+      "name": "Controller water ingress",
+      "component": "Motor controller and wiring enclosure",
+      "severity": "critical",
+      "mtbf_hours_est": 2300,
+      "symptoms": "Erratic throttle response, complete loss of motor assist after wet exposure, burnt smell from controller, or corrosion on internal PCB.",
+      "mitigation": "Seal and relube enclosure gaskets, mount controller away from spray path, dielectric-grease connectors, and replace water-damaged controllers."
+    },
+    {
+      "name": "Tire punctures",
+      "component": "Pneumatic tires and tubes",
+      "severity": "low",
+      "mtbf_hours_est": 1200,
+      "symptoms": "Sudden pressure loss, visible puncture or embedded debris, ride instability, or repeated flats on the same wheel.",
+      "mitigation": "Use puncture-resistant tires/tubes, carry roadside repair kit, inspect for embedded debris at service, and maintain correct pressure."
+    }
+  ]
+}

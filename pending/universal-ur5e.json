@@ -1,0 +1,37 @@
+{
+  "slug": "universal-ur5e",
+  "failure_modes": [
+    {
+      "name": "wrist_joint_backlash",
+      "component": "wrist_joint",
+      "severity": "medium",
+      "mtbf_hours_est": 400,
+      "symptoms": "position error at wrist; play in end-effector; reduced path accuracy",
+      "mitigation": "harmonic drive inspection; backlash compensation; joint replacement; path recalibration"
+    },
+    {
+      "name": "teach_pendant_cable_fatigue",
+      "component": "teach_pendant",
+      "severity": "low",
+      "mtbf_hours_est": 600,
+      "symptoms": "intermittent pendant connection; cable fraying; connector looseness",
+      "mitigation": "cable strain relief; connector inspection; wireless pendant option; preventive replacement"
+    },
+    {
+      "name": "safety_zone_violation",
+      "component": "safety_scanner",
+      "severity": "high",
+      "mtbf_hours_est": 500,
+      "symptoms": "unexpected entry into workspace; safety stop; reduced throughput; zone breach",
+      "mitigation": "safety scanner calibration; zone configuration; light-curtain backup; access control"
+    },
+    {
+      "name": "joint_motor_thermal_overload",
+      "component": "joint_actuator",
+      "severity": "medium",
+      "mtbf_hours_est": 450,
+      "symptoms": "motor temperature warning; reduced speed; cooldown required; duty-cycle limit hit",
+      "mitigation": "thermal monitoring; duty-cycle management; ambient cooling; payload derating"
+    }
+  ]
+}

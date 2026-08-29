@@ -1,0 +1,45 @@
+{
+  "slug": "dji-agras-t60",
+  "failure_modes": [
+    {
+      "name": "spreader_impeller_wear_jam",
+      "component": "spreader_impeller_auger",
+      "severity": "high",
+      "mtbf_hours_est": 200,
+      "symptoms": "uneven granular spread; impeller stall under wet seed; motor overcurrent; reduced throw distance",
+      "mitigation": "clean hopper after each use; replace impeller ~100h; keep granules dry; lubricate bearing"
+    },
+    {
+      "name": "nozzle_pump_clog",
+      "component": "spray_nozzle_pump_assembly",
+      "severity": "high",
+      "mtbf_hours_est": 150,
+      "symptoms": "uneven spray pattern; reduced flow rate; under-dose streak; pump pressure-low alarm",
+      "mitigation": "flush lines with water post-sortie; inline strainer; nozzle replacement ~50h; correct dilution"
+    },
+    {
+      "name": "battery_fade",
+      "component": "DB2160_intelligent_battery",
+      "severity": "high",
+      "mtbf_hours_est": 400,
+      "symptoms": "reduced flight time; cell-imbalance warning; faster charge heat; early low-battery RTH",
+      "mitigation": "cap fast-charge cycles; weekly balance charge; 50% SOC storage; retire below 80% capacity"
+    },
+    {
+      "name": "chemical_corrosion",
+      "component": "airframe_boom_aluminum",
+      "severity": "medium",
+      "mtbf_hours_est": 500,
+      "symptoms": "oxide deposits on frame; sticky hinges; corroded fasteners; bracket loosening",
+      "mitigation": "rinse after chemical use; anti-corrosion treatment; monthly torque audit"
+    },
+    {
+      "name": "rtk_drift",
+      "component": "rtk_gnss_module",
+      "severity": "high",
+      "mtbf_hours_est": 300,
+      "symptoms": "position drift >10cm; NTRIP fix lost; zig-zag path; swath misalignment",
+      "mitigation": "verify base-station health; redundant NTRIP; antenna reposition; re-survey on float"
+    }
+  ]
+}

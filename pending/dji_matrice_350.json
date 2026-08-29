@@ -1,0 +1,45 @@
+{
+  "slug": "dji_matrice_350",
+  "failure_modes": [
+    {
+      "name": "tb65_battery_cycle_fade",
+      "component": "TB65_intelligent_flight_battery",
+      "severity": "high",
+      "mtbf_hours_est": 500,
+      "symptoms": "reduced endurance; cell imbalance; longer charge time; capacity below 85%",
+      "mitigation": "retire at ~400 cycles; cool storage; balance charge; avoid deep discharge"
+    },
+    {
+      "name": "gimbal_connector_fault",
+      "component": "gimbal_payload_connector_eport",
+      "severity": "medium",
+      "mtbf_hours_est": 400,
+      "symptoms": "camera feed dropout; gimbal not recognized; intermittent payload error; loose seat",
+      "mitigation": "inspect connector pins; correct mating torque; protective cap when idle; payload re-init on fault"
+    },
+    {
+      "name": "o3_link_interference",
+      "component": "O3_enterprise_video_control_link",
+      "severity": "high",
+      "mtbf_hours_est": 300,
+      "symptoms": "video stutter; control-latency spikes; link-lost warning; reduced range near structures",
+      "mitigation": "add redundant LTE/4G dongle; pre-flight frequency scan; avoid RF-dense corridors; antenna orientation check"
+    },
+    {
+      "name": "ip55_seal_aging",
+      "component": "airframe_gasket_seal",
+      "severity": "medium",
+      "mtbf_hours_est": 600,
+      "symptoms": "moisture inside body; fogged internals; connector corrosion; visible seal cracking",
+      "mitigation": "annual seal replacement; post-rain inspection; silica desiccant packs; pressure test"
+    },
+    {
+      "name": "propeller_stress",
+      "component": "carbon_fiber_propeller",
+      "severity": "high",
+      "mtbf_hours_est": 350,
+      "symptoms": "crack at prop root; vibration increase; unusual acoustic tone; imbalance warning",
+      "mitigation": "root crack inspection each flight; replace at ~300 cycles; avoid ground strike; torque prop nuts"
+    }
+  ]
+}

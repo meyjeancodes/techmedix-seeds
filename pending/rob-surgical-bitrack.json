@@ -1,0 +1,37 @@
+{
+  "slug": "rob-surgical-bitrack",
+  "failure_modes": [
+    {
+      "name": "needle_driver_misalignment",
+      "component": "needle_instrument",
+      "severity": "critical",
+      "mtbf_hours_est": 140,
+      "symptoms": "needle deflection; off-target placement; suture failure; tissue tear",
+      "mitigation": "needle-guide calibration; driver-jaw replacement; pre-op alignment check; force feedback"
+    },
+    {
+      "name": "dual_arm_desync",
+      "component": "arm_coordination",
+      "severity": "high",
+      "mtbf_hours_est": 220,
+      "symptoms": "arms out of phase; collision risk; workspace violation; master-slave lag",
+      "mitigation": "clock-sync protocol; arm-collision avoidance; workspace boundary; re-mastering routine"
+    },
+    {
+      "name": "registration_drift",
+      "component": "patient_registration",
+      "severity": "high",
+      "mtbf_hours_est": 280,
+      "symptoms": "robot-patient coordinate mismatch; targeting error; navigation offset; re-registration needed",
+      "mitigation": "fiducial tracking; continuous registration; drift alarm; re-calibration protocol"
+    },
+    {
+      "name": "arm_joint_overtorque",
+      "component": "arm_actuator",
+      "severity": "medium",
+      "mtbf_hours_est": 350,
+      "symptoms": "joint thermal overload; torque limiting; reduced speed; cooldown required",
+      "mitigation": "torque-limit tuning; thermal monitoring; duty-cycle management; cooling period"
+    }
+  ]
+}

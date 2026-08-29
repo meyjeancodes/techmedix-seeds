@@ -1,0 +1,37 @@
+{
+  "slug": "kuka-med14",
+  "failure_modes": [
+    {
+      "name": "force_torque_sensor_drift",
+      "component": "joint_torque_sensor",
+      "severity": "high",
+      "mtbf_hours_est": 350,
+      "symptoms": "force reading offset; contact detection error; reduced compliance accuracy",
+      "mitigation": "sensor recalibration; drift monitoring; temperature compensation; sensor replacement"
+    },
+    {
+      "name": "medical_housing_seal_wear",
+      "component": "arm_housing",
+      "severity": "medium",
+      "mtbf_hours_est": 500,
+      "symptoms": "IP-rating compromise; seal degradation; cleaning fluid ingress; discoloration",
+      "mitigation": "seal replacement schedule; IP testing; cleaning protocol; housing inspection"
+    },
+    {
+      "name": "lightweight_arm_resonance",
+      "component": "arm_structure",
+      "severity": "medium",
+      "mtbf_hours_est": 400,
+      "symptoms": "vibration at certain poses; path oscillation; settling time increase",
+      "mitigation": "vibration damping; trajectory filtering; stiffness tuning; payload verification"
+    },
+    {
+      "name": "certification_expiry",
+      "component": "medical_certification",
+      "severity": "high",
+      "mtbf_hours_est": 8760,
+      "symptoms": "CE-mark lapse; regulatory non-compliance; clinical-use suspension; audit finding",
+      "mitigation": "certification tracking; renewal calendar; notified-body engagement; documentation audit"
+    }
+  ]
+}

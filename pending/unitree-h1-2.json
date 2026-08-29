@@ -1,0 +1,45 @@
+{
+  "slug": "unitree-h1-2",
+  "failure_modes": [
+    {
+      "name": "Motor overheat",
+      "component": "M107 joint motor (high-torque PMSM)",
+      "severity": "high",
+      "mtbf_hours_est": 1000,
+      "symptoms": "Winding temperature over limit; torque fade; thermal shutdown; stator insulation stress",
+      "mitigation": "Duty-cycle management; forced convection; thermal-derate control law; IR inspection of windings"
+    },
+    {
+      "name": "Head-mast fall damage",
+      "component": "Head/perception mast (lidar + cameras on upper frame)",
+      "severity": "high",
+      "mtbf_hours_est": 1500,
+      "symptoms": "Mast sheared or loose after tip/impact; sensor misalignment; lost perception; cracked mount",
+      "mitigation": "Reinforced mast base; crash cage; post-fall calibration check; tip-over reflex to protect upper body"
+    },
+    {
+      "name": "Reducer backlash",
+      "component": "Joint harmonic/drive reducer",
+      "severity": "medium",
+      "mtbf_hours_est": 2800,
+      "symptoms": "Dead-band on direction reversal; position error under load; audible cogging; degraded tracking",
+      "mitigation": "Backlash-compensating control; preload maintenance; backlash measurement at service; reducer replacement at wear limit"
+    },
+    {
+      "name": "Ankle overload",
+      "component": "Ankle pitch/roll actuator (foot-end)",
+      "severity": "high",
+      "mtbf_hours_est": 1400,
+      "symptoms": "High peak torque on uneven terrain; foot instability; reducer strain; current spikes at heel strike",
+      "mitigation": "Compliant ankle tuning; terrain-adaptive foot placement; torque limiting; foot-force sensing"
+    },
+    {
+      "name": "Power brownout",
+      "component": "Battery / DC bus regulation",
+      "severity": "critical",
+      "mtbf_hours_est": 2200,
+      "symptoms": "Bus voltage sag under peak demand; compute reset; actuator fault latches; sudden locomotion halt",
+      "mitigation": "Supercapacitor buffer; bus-undervoltage lockout with graceful shutdown; load-shedding scheduler; cell-balancing"
+    }
+  ]
+}

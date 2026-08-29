@@ -1,0 +1,53 @@
+{
+  "slug": "zipline_p2",
+  "failure_modes": [
+    {
+      "name": "winch_tether_jam",
+      "component": "delivery_winch_tether",
+      "severity": "critical",
+      "mtbf_hours_est": 200,
+      "symptoms": "tether fails to deploy; winch stall; package not released; retrieval failure",
+      "mitigation": "lubricate winch; inspect tether wear; pre-flight deploy/retract test; redundant release mechanism"
+    },
+    {
+      "name": "droid_thruster_fault",
+      "component": "droid_ground_thruster",
+      "severity": "high",
+      "mtbf_hours_est": 300,
+      "symptoms": "reduced ground thrust; uneven roll; thruster stall on slope; overheating",
+      "mitigation": "clear thruster debris; motor-temp monitor; replace bearing; firmware derate"
+    },
+    {
+      "name": "vtol_transition_failure",
+      "component": "transition_actuator_wing_rotor",
+      "severity": "critical",
+      "mtbf_hours_est": 250,
+      "symptoms": "failed transition to cruise; high drag; stall warning; unrecoverable attitude",
+      "mitigation": "airspeed-gate checks; actuator inspection; enforce wind limits; redundant attitude sensor"
+    },
+    {
+      "name": "daa_acoustic_false_alarm",
+      "component": "detect_and_avoid_acoustic_sensor",
+      "severity": "medium",
+      "mtbf_hours_est": 350,
+      "symptoms": "false collision alerts; unnecessary avoidance maneuvers; nuisance RTH; masks real threats",
+      "mitigation": "sensor calibration; noise-filter tuning; environment noise map; cross-check with radar"
+    },
+    {
+      "name": "energy_reserve_shortfall",
+      "component": "battery_energy_management",
+      "severity": "critical",
+      "mtbf_hours_est": 300,
+      "symptoms": "insufficient reserve for return; unexpected landing; range shrink; SOC misestimate",
+      "mitigation": "conservative reserve margin; accurate SoC model; weather derate; abort logic"
+    },
+    {
+      "name": "airframe_icing",
+      "component": "airframe_rotor_ice",
+      "severity": "high",
+      "mtbf_hours_est": 150,
+      "symptoms": "weight increase; reduced lift; vibration; rotor imbalance",
+      "mitigation": "de-ice pre-flight; avoid icing conditions; heater elements; ground temp/humidity check"
+    }
+  ]
+}

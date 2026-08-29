@@ -1,0 +1,45 @@
+{
+  "slug": "amazon_proteus",
+  "failure_modes": [
+    {
+      "name": "lidar_dust_contamination",
+      "component": "lidar_navigation_sensor",
+      "severity": "high",
+      "mtbf_hours_est": 250,
+      "symptoms": "navigation drift; missed obstacles; false stops; localization loss",
+      "mitigation": "compressed-air clean; intake filter; scheduled maintenance; sensor enclosure"
+    },
+    {
+      "name": "drive_motor_fault",
+      "component": "drive_wheel_motor",
+      "severity": "high",
+      "mtbf_hours_est": 400,
+      "symptoms": "reduced torque; overheating; encoder error; wheel slip",
+      "mitigation": "motor-temp monitor; gear lubrication; replace brush/bearing; derate"
+    },
+    {
+      "name": "cart_lift_mechanism_wear",
+      "component": "cart_lift_actuator",
+      "severity": "high",
+      "mtbf_hours_est": 350,
+      "symptoms": "lift hesitation; misaligned cart dock; actuator stall; dropped cart",
+      "mitigation": "lubricate; alignment check; load-cell sensor; replace actuator"
+    },
+    {
+      "name": "battery_charging_dock_misalignment",
+      "component": "charging_contact_dock",
+      "severity": "medium",
+      "mtbf_hours_est": 400,
+      "symptoms": "failed charge contact; intermittent charge; sparking; mis-seat",
+      "mitigation": "dock alignment; clean contacts; reposition dock; auto-realign routine"
+    },
+    {
+      "name": "safety_stop_nuisance_trigger",
+      "component": "safety_laser_scanner",
+      "severity": "medium",
+      "mtbf_hours_est": 300,
+      "symptoms": "unexpected E-stop; false obstacle; line stoppage; throughput loss",
+      "mitigation": "scanner recalibration; zone tuning; reflective masking; filter adjustment"
+    }
+  ]
+}

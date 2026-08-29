@@ -1,0 +1,53 @@
+{
+  "slug": "dji_agras_t50",
+  "failure_modes": [
+    {
+      "name": "nozzle_pump_clog",
+      "component": "spray_nozzle_pump_assembly",
+      "severity": "high",
+      "mtbf_hours_est": 150,
+      "symptoms": "uneven spray pattern; reduced flow rate; localized under-dose streak on crop; pump pressure-low alarm",
+      "mitigation": "flush lines with clean water after every sortie; install inline strainer; replace nozzles every ~50h; use recommended dilution"
+    },
+    {
+      "name": "battery_fast_charge_fade",
+      "component": "DB1560_intelligent_battery",
+      "severity": "high",
+      "mtbf_hours_est": 400,
+      "symptoms": "reduced flight time; cell-imbalance warning; faster temp rise during fast charge; premature low-battery RTH",
+      "mitigation": "limit fast-charge fraction of cycles; weekly balance charge; store at ~50% SOC; retire pack below 80% capacity"
+    },
+    {
+      "name": "chemical_corrosion",
+      "component": "airframe_boom_aluminum",
+      "severity": "medium",
+      "mtbf_hours_est": 500,
+      "symptoms": "white oxide deposits on frame; sticky boom hinges; corroded screw heads; sensor-bracket loosening",
+      "mitigation": "rinse airframe after herbicide/fertilizer use; anti-corrosion spray on joints; monthly bracket torque check"
+    },
+    {
+      "name": "radar_misses_on_wires",
+      "component": "downward_obstacle_avoidance_radar",
+      "severity": "critical",
+      "mtbf_hours_est": 200,
+      "symptoms": "power/fence wire absent from obstacle map; close-call near lines; radar blind at grazing incidence; no avoidance trigger",
+      "mitigation": "manual wire survey before autonomous mapping; fuse vision+radar; slow transit near known lines; operator spotter"
+    },
+    {
+      "name": "esc_overtemp",
+      "component": "electronic_speed_controller",
+      "severity": "high",
+      "mtbf_hours_est": 250,
+      "symptoms": "ESC temperature warning; reduced thrust on hot motor; auto-land triggered; acrid smell",
+      "mitigation": "derate in high-ambient temps; clean motor/ESC cooling fins; firmware current limit; pre-flight motor-temp check"
+    },
+    {
+      "name": "rtk_drift",
+      "component": "rtk_gnss_module",
+      "severity": "high",
+      "mtbf_hours_est": 300,
+      "symptoms": "position drift >10cm; NTRIP fix lost/float; zig-zag flight path; swath overlap misalignment",
+      "mitigation": "verify base-station link health; redundant NTRIP source; reposition mast antenna; re-survey when fix floats"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "franka-panda",
+  "failure_modes": [
+    {
+      "name": "joint_torque_sensor_drift",
+      "component": "joint_torque_sensor",
+      "severity": "high",
+      "mtbf_hours_est": 400,
+      "symptoms": "force reading offset; contact detection false-positive; reduced manipulation accuracy",
+      "mitigation": "sensor recalibration; temperature compensation; drift monitoring; sensor replacement"
+    },
+    {
+      "name": "gripper_slip_during_manipulation",
+      "component": "franka_hand_gripper",
+      "severity": "medium",
+      "mtbf_hours_est": 350,
+      "symptoms": "object drop; grip-force insufficient; finger wear; slippage on smooth surfaces",
+      "mitigation": "gripper pad replacement; force-closure grasp planning; tactile sensing; slip detection"
+    },
+    {
+      "name": "controller_desync",
+      "component": "real_time_controller",
+      "severity": "high",
+      "mtbf_hours_est": 500,
+      "symptoms": "1kHz control loop missed; arm jitter; communication timeout; emergency stop",
+      "mitigation": "real-time kernel tuning; network QoS; watchdog monitoring; redundant control link"
+    },
+    {
+      "name": "joint_overtemperature",
+      "component": "joint_actuator",
+      "severity": "medium",
+      "mtbf_hours_est": 450,
+      "symptoms": "motor thermal warning; reduced torque; cooldown pause; joint error",
+      "mitigation": "thermal model; duty-cycle limit; active cooling; ambient temperature control"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "lime_gen4",
+  "failure_modes": [
+    {
+      "name": "Swappable battery latch/BMS fault",
+      "component": "Swappable battery pack, latch, and BMS",
+      "severity": "high",
+      "mtbf_hours_est": 2400,
+      "symptoms": "Battery refuses to seat or releases mid-ride, BMS reports cell fault, no power after swap, or charger flags pack as incompatible.",
+      "mitigation": "Inspect and lubricate latch mechanism at swap, enforce BMS handshake validation, quarantine packs failing diagnostics, and replace worn latch springs."
+    },
+    {
+      "name": "Drum brake wear",
+      "component": "Sealed drum brake (rear hub)",
+      "severity": "medium",
+      "mtbf_hours_est": 1900,
+      "symptoms": "Longer stopping distance, grinding during braking, pedal/lever over-travel, or brake drag reducing range.",
+      "mitigation": "Scheduled shoe inspection at service interval, replace worn shoes, recalibrate actuation, and capture braking telemetry to detect wear."
+    },
+    {
+      "name": "IoT dropout",
+      "component": "Cellular IoT connectivity module",
+      "severity": "medium",
+      "mtbf_hours_est": 3000,
+      "symptoms": "Unit disappears from fleet map, unlock fails, no heartbeat pings, or rides stuck 'in progress' after completion.",
+      "mitigation": "Remote reboot, redundant carrier failover, antenna/SIM inspection, and module swap on persistent dropout."
+    },
+    {
+      "name": "Stem/folding mechanism failure",
+      "component": "Steering stem and folding latch",
+      "severity": "critical",
+      "mtbf_hours_est": 2000,
+      "symptoms": "Stem wobble or sudden collapse under rider weight, folding latch will not lock, creaking at hinge, or handlebars misaligned.",
+      "mitigation": "Torque-check folding bolts at service, replace fatigued latch pins, mandatory lock-engagement verification before deployment, and retire cracked frames."
+    },
+    {
+      "name": "Tire wear",
+      "component": "Pneumatic/tubeless tires",
+      "severity": "low",
+      "mtbf_hours_est": 3500,
+      "symptoms": "Reduced tread depth, sidewall cracking, flat spots, or increased slip on wet surfaces.",
+      "mitigation": "Tread-depth inspection at service, replace tires at limit, maintain correct pressure, and rotate to even wear."
+    },
+    {
+      "name": "Vandalism damage",
+      "component": "Frame, electronics, and locking system",
+      "severity": "medium",
+      "mtbf_hours_est": 1600,
+      "symptoms": "Cut cables, snapped stem, disabled lock, smashed display, or stripped ID tags found at recovery.",
+      "mitigation": "Tamper-evident seals, geofenced idle alerts, rapid pickup of mis-parked units, and repair-or-retire triage."
+    }
+  ]
+}
